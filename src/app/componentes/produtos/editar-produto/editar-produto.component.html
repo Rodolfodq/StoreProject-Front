@@ -1,0 +1,138 @@
+<section class="container editar-produto">
+  <header class="header">
+    <h2>Editar produto:</h2>
+  </header>
+  <form [formGroup]="formulario">
+    <label for="produto">Produto</label>
+    <input
+      type="text"
+      class="input"
+      id="nome"
+      formControlName="nome"
+      placeholder="Digite o nome do produto"
+    />
+    <div
+      class="mensagem__erro"
+      *ngIf="
+        formulario.get('nome')?.errors?.['required'] &&
+        formulario.get('nome')?.touched
+      "
+    >
+      Nome do produto é obrigatório!
+    </div>
+    <div
+      class="mensagem__erro"
+      *ngIf="
+        formulario.get('nome')?.errors?.['maxLength'] &&
+        formulario.get('nome')?.touched
+      "
+    >
+      Nome do produto deve conter no máximo 150 caracteres!
+    </div>
+    <label for="descricao">Descrição</label>
+    <input
+      type="textarea"
+      class="input"
+      id="descricao"
+      formControlName="descricao"
+      placeholder="Digite a descrição do produto"
+    />
+    <div
+      class="mensagem__erro"
+      *ngIf="
+        formulario.get('descricao')?.errors?.['required'] &&
+        formulario.get('descricao')?.touched
+      "
+    >
+      Descrição do produto é obrigatório!
+    </div>
+    <div
+      class="mensagem__erro"
+      *ngIf="
+        formulario.get('descricao')?.errors?.['maxLength'] &&
+        formulario.get('descricao')?.touched
+      "
+    >
+      Descrição do produto deve conter no máximo 2000 caracteres!
+    </div>
+    <label for="imagem">Imagem</label>
+    <input
+      type="url"
+      class="input"
+      id="imagem"
+      formControlName="imagem"
+      placeholder="Informe a Url da Imagem do produto"
+    />
+    <div
+      class="mensagem__erro"
+      *ngIf="
+        formulario.get('imagem')?.errors && formulario.get('imagem')?.touched
+      "
+    >
+      Imagem do produto deve ser uma Url válida!
+    </div>
+    <div>
+      <label for="estoque">Quantidade Estoque</label>
+      <input
+        type="number"
+        class="input"
+        id="estoque"
+        formControlName="estoque"
+        placeholder="Informe a quantidade em estoque"
+      />
+      <div
+        class="mensagem__erro"
+        *ngIf="
+        formulario.get('estoque')?.errors?.['required'] &&
+        formulario.get('estoque')?.touched
+      "
+      >
+        Estoque do produto é obrigatório!
+      </div>
+      <div
+        class="mensagem__erro"
+        *ngIf="
+        formulario.get('estoque')?.errors?.['min'] &&
+        formulario.get('estoque')?.touched
+      "
+      >
+        O estoque mínimo do produto é 1!
+      </div>
+      <label for="preço">Preço</label>
+      <input
+        type="number"
+        class="input"
+        id="preco"
+        formControlName="preco"
+        placeholder="Informe o preço do produto"
+      />
+      <div
+        class="mensagem__erro"
+        *ngIf="
+        formulario.get('preco')?.errors?.['required'] &&
+        formulario.get('preco')?.touched
+      "
+      >
+        Preço do produto é obrigatório!
+      </div>
+      <div
+        class="mensagem__erro"
+        *ngIf="
+        formulario.get('preco')?.errors?.['min'] &&
+        formulario.get('preco')?.touched
+      "
+      >
+        O preço mínimo do produto é R$0,01!
+      </div>
+    </div>
+
+    <label for="status">Ativo?</label>
+    <input type="checkbox" class="input" id="status" formControlName="status" />
+    <div class="acoes">
+      <button [disabled]="!formulario.valid" (click)="editarProduto()">
+        Salvar
+      </button>
+      <button (click)="cancelar()" class="botao">Cancelar</button>
+    </div>
+  </form>
+</section>

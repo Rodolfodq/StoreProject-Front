@@ -1,0 +1,22 @@
+.editar-produto form .input {
+  border: none;
+  height: 40px;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+
+.editar-produto form .textarea {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+
+.mensagem__erro {
+  font-size: 12px;
+  margin-left: 5px;
+  color: red;
+  margin-top: -25px;
+  margin-bottom: 20px;
+}
