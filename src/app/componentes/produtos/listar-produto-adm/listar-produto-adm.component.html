@@ -1,0 +1,57 @@
+<section class="container">
+  <header class="header d-flex">
+    <div class="buscar-produtos">
+      <h1 style="justify-content: center">Administração de produtos</h1>
+      <button (click)="cadastrarProduto()">Cadastrar novo produto</button>
+      <input
+        type="search"
+        class="filtro"
+        placeholder="Digite o nome do produto"
+        autofocus
+        [(ngModel)]="filtro"
+        (keyup)="pesquisaProdutos()"
+      />
+    </div>
+  </header>
+  <div class="listaProdutos" *ngIf="listaProdutos.length > 0; else semProdutos">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Preço</th>
+          <th scope="col">Estoque</th>
+          <th scope="col">Status</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Excluir</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let produto of listaProdutos">
+        <tr>
+          <th scope="row">{{ produto.idProduto }}</th>
+          <th scope="row">{{ produto.nome }}</th>
+          <th scope="row">R${{ produto.preco.toFixed(2) }}</th>
+          <th scope="row">{{ produto.estoque }}</th>
+          <th scope="row">
+            {{ produto.status === true ? "Ativo" : "Inativo" }}
+          </th>
+          <th scope="row">
+            <img
+              src="../../../../assets/imagens/icons8-pencil-40.png"
+              (click)="editarProduto(produto)"
+            />
+          </th>
+          <th scope="row">
+            <img src="../../../../assets/imagens/icons8-trash-can-48.png" />
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<ng-template #semProdutos>
+  <div class="ff-inter sem-produtos">
+    <p>Ainda não há produtos cadastrados!</p>
+  </div>
+</ng-template>

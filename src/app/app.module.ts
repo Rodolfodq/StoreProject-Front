@@ -12,6 +12,8 @@ import { DetalharProdutoComponent } from './componentes/produtos/detalhar-produt
 import { EditarProdutoComponent } from './componentes/produtos/editar-produto/editar-produto.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProdutoComponent } from './componentes/produtos/produto/produto.component';
+import { ListarProdutoAdmComponent } from './componentes/produtos/listar-produto-adm/listar-produto-adm.component';
+import { ProdutoAdmComponent } from './componentes/produtos/produto-adm/produto-adm.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ProdutoComponent } from './componentes/produtos/produto/produto.compone
     DetalharProdutoComponent,
     EditarProdutoComponent,
     ProdutoComponent,
+    ListarProdutoAdmComponent,
+    ProdutoAdmComponent,
   ],
   imports: [
     BrowserModule,

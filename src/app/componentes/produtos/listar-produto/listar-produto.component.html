@@ -12,7 +12,7 @@
     </div>
   </header>
   <div class="listaProdutos" *ngIf="listaProdutos.length > 0; else semProdutos">
-    <div *ngFor="let produto of listaProdutos">
+    <div class="card" *ngFor="let produto of listaProdutos">
       <app-produto [produto]="produto"> </app-produto>
     </div>
   </div>

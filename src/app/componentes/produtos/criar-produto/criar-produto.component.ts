@@ -2,6 +2,7 @@ import { ProdutoService } from './../../produto.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-criar-produto',
@@ -13,7 +14,8 @@ export class CriarProdutoComponent implements OnInit {
   constructor(
     private service: ProdutoService,
     private router: Router,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -63,6 +65,6 @@ export class CriarProdutoComponent implements OnInit {
   }
 
   cancelar() {
-    this.router.navigate(['/listarProdutos']);
+    this.location.back();
   }
 }

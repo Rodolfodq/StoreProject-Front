@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutoService } from '../../produto.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-editar-produto',
@@ -14,7 +15,8 @@ export class EditarProdutoComponent implements OnInit {
     private service: ProdutoService,
     private router: Router,
     private route: ActivatedRoute,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -66,7 +68,7 @@ export class EditarProdutoComponent implements OnInit {
   }
 
   cancelar() {
-    this.router.navigate(['/listarProdutos']);
+    this.location.back();
   }
 
   habilitarBotao(): string {

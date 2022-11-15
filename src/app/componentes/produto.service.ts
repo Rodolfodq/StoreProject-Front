@@ -25,10 +25,10 @@ export class ProdutoService {
 
   buscarProdutoPorNome(name: string): Observable<IProduto[]> {
     let params = new HttpParams();
-
+    console.log(name);
     if (name.trim().length > 2) {
       params = params.set('name', name.trim());
-      return this.http.get<IProduto[]>(`${this.API}/GetProdutoByName`, {
+      return this.http.get<IProduto[]>(`${this.API}/GetProductByName`, {
         params,
       });
     } else {

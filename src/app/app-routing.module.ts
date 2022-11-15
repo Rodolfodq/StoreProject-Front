@@ -4,6 +4,7 @@ import { ListarProdutoComponent } from './componentes/produtos/listar-produto/li
 import { CriarProdutoComponent } from './componentes/produtos/criar-produto/criar-produto.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ListarProdutoAdmComponent } from './componentes/produtos/listar-produto-adm/listar-produto-adm.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'produto/detalharProduto/:id',
     component: DetalharProdutoComponent,
+  },
+  {
+    path: 'listarProduto-adm',
+    component: ListarProdutoAdmComponent,
   },
 ];
 

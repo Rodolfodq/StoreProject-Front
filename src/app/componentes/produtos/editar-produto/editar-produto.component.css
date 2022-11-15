@@ -20,3 +20,7 @@
   margin-top: -25px;
   margin-bottom: 20px;
 }
+
+.listaProdutos {
+  align-items: center;
+}
