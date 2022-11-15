@@ -24,6 +24,6 @@ export class ProdutoComponent implements OnInit {
   ngOnInit(): void {}
 
   getDetalhesProduto(produto: IProduto) {
-    this.router.navigate([`/produto/detalharProduto/${produto.idProduto}`]);
+    this.router.navigate([`/detalharProduto/${produto.idProduto}`]);
   }
 }

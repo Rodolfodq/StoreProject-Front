@@ -63,7 +63,7 @@ export class EditarProdutoComponent implements OnInit {
 
   editarProduto() {
     this.service.editarProduto(this.formulario.value).subscribe(() => {
-      this.router.navigate(['/listarProdutos']);
+      this.router.navigate(['/listarProdutos-adm']);
     });
   }
 

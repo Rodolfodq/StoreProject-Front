@@ -1,3 +1,4 @@
+import { ExcluirProdutoComponent } from './componentes/produtos/excluir-produto/excluir-produto.component';
 import { DetalharProdutoComponent } from './componentes/produtos/detalhar-produto/detalhar-produto.component';
 import { EditarProdutoComponent } from './componentes/produtos/editar-produto/editar-produto.component';
 import { ListarProdutoComponent } from './componentes/produtos/listar-produto/listar-produto.component';
@@ -21,15 +22,19 @@ const routes: Routes = [
     component: ListarProdutoComponent,
   },
   {
-    path: 'produto/editarProduto/:id',
+    path: 'editarProduto/:id',
     component: EditarProdutoComponent,
   },
   {
-    path: 'produto/detalharProduto/:id',
+    path: 'detalharProduto/:id',
     component: DetalharProdutoComponent,
   },
   {
-    path: 'listarProduto-adm',
+    path: 'deletarProduto/:id',
+    component: ExcluirProdutoComponent,
+  },
+  {
+    path: 'listarProdutos-adm',
     component: ListarProdutoAdmComponent,
   },
 ];

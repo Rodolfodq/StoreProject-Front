@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProdutoComponent } from './componentes/produtos/produto/produto.component';
 import { ListarProdutoAdmComponent } from './componentes/produtos/listar-produto-adm/listar-produto-adm.component';
 import { ProdutoAdmComponent } from './componentes/produtos/produto-adm/produto-adm.component';
+import { ExcluirProdutoComponent } from './componentes/produtos/excluir-produto/excluir-produto.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProdutoAdmComponent } from './componentes/produtos/produto-adm/produto-
     ProdutoComponent,
     ListarProdutoAdmComponent,
     ProdutoAdmComponent,
+    ExcluirProdutoComponent,
   ],
   imports: [
     BrowserModule,

@@ -32,8 +32,10 @@ export class ListarProdutoAdmComponent implements OnInit {
   }
 
   editarProduto(produto: IProduto) {
-    this.router.navigate([
-      `/produto/editarProduto/${produto.idProduto?.toString()})}`,
-    ]);
+    this.router.navigate([`/editarProduto/${produto.idProduto?.toString()})}`]);
+  }
+
+  deletarProduto(produto: IProduto) {
+    this.router.navigate([`/deletarProduto/${produto.idProduto?.toString()}`]);
   }
 }
