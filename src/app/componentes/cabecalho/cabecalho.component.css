@@ -1,9 +1,23 @@
 img {
-  width: 10%;
-  padding: 2rem 3rem;
-  color: red;
+  width: 15%;
+  padding-right: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 .header {
   display: flex;
+}
+
+.header:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: 0;
 }
