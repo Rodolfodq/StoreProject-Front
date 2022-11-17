@@ -1,15 +1,7 @@
-article {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin: 1rem 0 2rem;
-  align-items: center;
-  margin: 10px 10px;
-  padding: 10px;
-  flex-direction: row;
-  gap: 2rem;
+.text {
+  margin: 5px;
+  word-wrap: break-word;
+  width: inherit; /* width: 100px; */
 }
 
 .float-layout {
@@ -19,14 +11,16 @@ article {
   height: auto;
   box-sizing: border-box;
   margin: 0;
+  flex-direction: column;
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(121, 120, 120, 0.2);
   transition: 0.3s;
   max-width: 400px;
-  float: left;
-  width: 25%;
+  float: center;
+  width: 50%;
+  height: 50%;
   padding: 0 10px;
   text-align: left;
   font-size: 18px;
@@ -37,14 +31,33 @@ article {
 }
 
 .container {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: auto;
 }
 
-.imagem {
-  max-width: 100%;
+.dados {
   display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+img {
+  display: flex;
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+  object-fit: scale-down;
+  object-position: 25% 25%;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
 }
 
 @media screen and (max-width: 600px) {

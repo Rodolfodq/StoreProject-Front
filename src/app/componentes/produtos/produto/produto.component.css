@@ -12,13 +12,22 @@ article {
   gap: 2rem;
 }
 
+.nome {
+  margin: 2px;
+  word-wrap: break-word;
+}
+
+.valor {
+  margin: 2px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(121, 120, 120, 0.2);
   transition: 0.3s;
   min-width: 350px;
   max-width: 350px;
-  width: auto;
-  height: auto;
   align-items: left;
   padding: 0 10px;
 }
@@ -32,16 +41,34 @@ article {
   align-items: center;
   justify-content: center;
   margin-bottom: auto;
+  white-space: pre-wrap;
+  overflow: hidden;
 }
 
-.imagem {
-  max-width: 100%;
+img {
+  display: flex;
+  margin: 20px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: 25% 25%;
 }
 
-@media screen and (max-width: 600px) {
-  article {
+/* .produto-g {
+  width: 556px;
+}
+
+.produto-p {
+  width: 262px;
+}
+
+@media screen and (max-width: 768px) {
+  .produto-g {
     width: 100%;
-    display: block;
-    margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 426px) {
+  .produto-p {
+    width: 100%;
+  }
+} */

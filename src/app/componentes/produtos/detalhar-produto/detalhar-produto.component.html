@@ -1,19 +1,19 @@
-<article class="card">
-  <div class="float-layout">
-    <div class="imagem">
-      <img src="{{ produto.imagem }}" alt="Imagem do produto" />
-    </div>
+<article class="container">
+  <div class="float-layout d-flex">
     <div class="container">
-      <h3 style="margin-bottom: auto">{{ produto.nome }}</h3>
-      <h2 style="margin-bottom: auto">R${{ produto.preco.toFixed(2) }}</h2>
-      <p style="margin-bottom: auto">Detalhes:</p>
-      <hr />
-      <p style="margin-bottom: auto">{{ produto.descricao }}</p>
-      <hr />
+      <img src="{{ produto.imagem }}" alt="Imagem do produto" />
+      <div class="dados">
+        <h3 class="text">{{ produto.nome }}</h3>
+        <h2 class="text">R${{ produto.preco.toFixed(2) }}</h2>
+        <p class="text">Detalhes:</p>
+        <p class="text">{{ produto.descricao }}</p>
+      </div>
     </div>
     <div>
       <input type="number" min="1" max="{{ produto.estoque }}" />
-      <button>Adicionar ao carrinho</button>
+      <button (click)="adicionarAoCarrinho(produto.nome)">
+        Adicionar ao carrinho
+      </button>
     </div>
   </div>
 </article>

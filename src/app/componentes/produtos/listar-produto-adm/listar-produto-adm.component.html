@@ -29,7 +29,9 @@
       <tbody *ngFor="let produto of listaProdutos">
         <tr>
           <th scope="row">{{ produto.idProduto }}</th>
-          <th scope="row">{{ produto.nome }}</th>
+          <th scope="row">
+            {{ produto.nome }}
+          </th>
           <th scope="row">R${{ produto.preco.toFixed(2) }}</th>
           <th scope="row">{{ produto.estoque }}</th>
           <th scope="row">

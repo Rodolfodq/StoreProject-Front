@@ -1,7 +1,7 @@
 import { IProduto } from './../../IProduto';
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../../produto.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detalhar-produto',
@@ -18,16 +18,16 @@ export class DetalharProdutoComponent implements OnInit {
     preco: 0,
     status: false,
   };
-  constructor(
-    private service: ProdutoService,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
+  constructor(private service: ProdutoService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.service.buscarProdutoPorId(parseInt(id!)).subscribe((produto) => {
       this.produto = produto;
     });
+  }
+
+  adicionarAoCarrinho(nome: string) {
+    alert(`${nome} adicionado ao carrinho!`);
   }
 }
