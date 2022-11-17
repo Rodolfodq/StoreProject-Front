@@ -14,7 +14,6 @@ article {
 
 .nome {
   margin: 2px;
-  word-wrap: break-word;
 }
 
 .valor {
@@ -28,6 +27,8 @@ article {
   transition: 0.3s;
   min-width: 350px;
   max-width: 350px;
+  min-height: 500px;
+  max-height: 500px;
   align-items: left;
   padding: 0 10px;
 }

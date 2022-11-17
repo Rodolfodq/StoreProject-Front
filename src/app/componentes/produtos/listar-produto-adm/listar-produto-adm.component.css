@@ -1,5 +1,4 @@
 .listaProdutos {
-  /*border: 1px solid #ccc;*/
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -7,18 +6,10 @@
   justify-content: center;
 }
 
-.card {
-  width: 33%;
-}
-
-.d-flexx {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
+.wrapper {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 img:hover {
